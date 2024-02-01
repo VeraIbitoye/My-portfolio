@@ -4,46 +4,70 @@ import Ecommerce from "../assets/img/EcommerceImg.png";
 import todoList from "../assets/img/todoList.png";
 import tracker from "../assets/img/trackerImg.png";
 import expenseTracker from "../assets/img/expenseTracker.png"
+import myPortImg from "../assets/img/myPortImg.PNG"
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import realEstate from "../assets/img/realEstate.png"
 import quizImg from "../assets/img/quizImg.png"
+import recipeImg from "../assets/img/recipeImg.png"
+import Analysics from "../assets/img/Analysics.png"
+import designerImg from "../assets/img/designerImg.PNG"
 export const Projects = () => {
 
   const projects= [
     {
-      title: "Expense Tracker",
+      title: "My Portfolio Website",
       description: "Design & Development",
-      imgUrl: expenseTracker,
+      imgUrl: myPortImg,
     },
     {
-      title: "Real Estate",
+      title: "E-commerce website",
       description: "Design & Development",
-      imgUrl: realEstate,
+      imgUrl: Ecommerce,
+  
     },
     {
-      title: "Todo List",
+      title: "Search Recipe",
       description: "Design & Development",
-      imgUrl: todoList,
+      imgUrl: recipeImg,
     },
   ];
 
   const pro= [
     {
-      title: "Ecommerce",
-      description: "Design & Development",
-      imgUrl: Ecommerce,
-    },
-    {
       title: "Quiz App",
       description: "Design & Development",
       imgUrl: quizImg,
+  
     },
     {
-      title: "Business Startup",
+      title: "Analysis site",
       description: "Design & Development",
-      imgUrl: tracker,
+      imgUrl: Analysics,
+    },
+    {
+      title: "Designer site",
+      description: "Design & Development",
+      imgUrl: designerImg,
+    },
+  ];
+  const proj= [
+    {
+      title: "Real Estate",
+      description: "Design & Development",
+      imgUrl: realEstate,
+  
+    },
+    {
+      title: "Expense Tracker",
+      description: "Design & Development",
+      imgUrl:expenseTracker ,
+    },
+    {
+      title: "Todo list",
+      description: "Design & Development",
+      imgUrl: todoList,
     },
   ];
 
@@ -56,7 +80,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>I have worked on the following projects</p>
+                <p>Some of my projects</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
@@ -99,7 +123,18 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Row>
+                        {
+                          proj.map((proj, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...proj}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>

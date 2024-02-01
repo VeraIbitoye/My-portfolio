@@ -75,7 +75,7 @@ export const NavBar = () => {
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
-              <div className="social-icon">
+              {/* <div className="social-icon">
                 <a
                   href="http://linkedin.com/in/vera-ibitoye-a1a2331b4
 "
@@ -88,7 +88,7 @@ export const NavBar = () => {
                 <a href="#">
                   <img src={navIcon3} alt="" />
                 </a>
-              </div>
+              </div> */}
               <HashLink to="#connect">
                 <button className="vvd">
                   <span>Let’s Connect</span>
