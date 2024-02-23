@@ -51,7 +51,7 @@ export const Banner = () => {
       setIndex((prevIndex) => prevIndex + 1);
     }
   };
-  const PDF_FILE_URL = process.env.PUBLIC_URL + '/CvCopy.pdf';
+  const PDF_FILE_URL = process.env.PUBLIC_URL + '/MyCv.pdf';
 
   return (
     <section className="banner" id="home">
