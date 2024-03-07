@@ -51,7 +51,7 @@ export const Banner = () => {
       setIndex((prevIndex) => prevIndex + 1);
     }
   };
-  const PDF_FILE_URL = process.env.PUBLIC_URL + '/MyCv.pdf';
+  const PDF_FILE_URL = process.env.PUBLIC_URL + '/MyResume.pdf';
 
   return (
     <section className="banner" id="home">
@@ -89,7 +89,7 @@ export const Banner = () => {
                   </button> */}
                           <button className="">
     <a href={PDF_FILE_URL} 
-    download="MyCv.pdf"
+    download="MyResume.pdf"
               className="text-center text-white "
      >Download CV</a></button>
                 </div>
